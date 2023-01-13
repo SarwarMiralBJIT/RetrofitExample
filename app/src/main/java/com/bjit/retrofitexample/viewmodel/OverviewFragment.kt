@@ -25,17 +25,10 @@ import androidx.fragment.app.viewModels
 import com.bjit.retrofitexample.adapter.PhotoGridAdapter
 import com.bjit.retrofitexample.databinding.FragmentOverviewBinding
 
-/**
- * This fragment shows the the status of the Mars photos web services transaction.
- */
 class OverviewFragment : Fragment() {
 
     private val viewModel: OverviewViewModel by viewModels()
 
-    /**
-     * Inflates the layout with Data Binding, sets its lifecycle owner to the OverviewFragment
-     * to enable Data Binding to observe LiveData, and sets up the RecyclerView with an adapter.
-     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
