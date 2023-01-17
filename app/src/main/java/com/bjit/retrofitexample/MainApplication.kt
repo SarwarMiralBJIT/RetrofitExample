@@ -5,20 +5,12 @@ import android.content.Context
 
 class MainApplication : Application() {
 
-    init {
-        instance = this
+    override fun onCreate() {
+        super.onCreate()
+        MainApplication.appContext = applicationContext
     }
 
     companion object {
-        private var instance: MainApplication? = null
-
-        fun applicationContext() : Context {
-            return instance!!.applicationContext
-        }
-    }
-
-    override fun onCreate() {
-        super.onCreate()
-        val context: Context = MainApplication.applicationContext()
+        lateinit  var appContext: Context
     }
 }

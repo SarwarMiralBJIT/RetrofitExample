@@ -36,7 +36,7 @@ fun bindRecyclerView(recyclerView: RecyclerView, data: List<MarsPhoto>?) {
 
 @BindingAdapter("imageUrl")
 fun bindImage(imgView: ImageView, imgUrl: String?) {
-    Glide.with(MainApplication.applicationContext()).load(imgUrl).into(imgView)
+    Glide.with(MainApplication.appContext).load(imgUrl).into(imgView)
 }
 
 @BindingAdapter("marsApiStatus")
